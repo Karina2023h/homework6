@@ -1,8 +1,8 @@
-function removeCharacters(str, charsToRemove) {
+function removeElement(str, remove) {
   let result = "";
 
   for (let i = 0; i < str.length; i++) {
-    if (!charsToRemove.includes(str[i])) {
+    if (!remove.includes(str[i])) {
       result += str[i];
     }
   }
@@ -11,11 +11,11 @@ function removeCharacters(str, charsToRemove) {
 }
 
 let input = prompt("Введіть рядок:");
-let charsToRemoveStr = prompt("Введіть символи для видалення:");
+let removeStr = prompt("Введіть символи для видалення:");
 
-let charsToRemove = charsToRemoveStr.split("");
+let remove = removeStr.split("");
 
-let result = removeCharacters(input, charsToRemove);
+let result = removeElement(input, remove);
 
 console.log(`Результат: ${result}`);
 alert(`Результат: ${result}`);
